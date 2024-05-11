@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给妈妈的爱</title>
+    </title>
+    <script src="js/jquery.js"></script>
+    <script src="js/snowfall.jquery.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .heart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 400px;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .snowfall-flakes:before,
+        .snowfall-flakes:after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 30px;
+            display: block;
+            background: red;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .snowfall-flakes:before {
+            transform: rotate(-45deg);
+        }
+
+        .snowfall-flakes:after {
+            transform: rotate(45deg);
+            left: 7px;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: url("images/1.png");
+            background-position: center 10px;
+            background-size: 30%;
+            background-repeat: no-repeat;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        img {
+            width: 80%;
+            margin-top: 80%;
+        }
+
+        .anima {
+            animation-name: likes; 
+            animation-direction: alternate; 
+            animation-timing-function: linear; 
+            animation-delay: 0s; 
+            animation-iteration-count: infinite; 
+            animation-duration: 1s; 
+        }
+
+        @keyframes likes {
+            0% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(0.9);
+            }
+
+            50% {
+                transform: scale(0.85);
+            }
+
+            75% {
+                transform: scale(0.9);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heart">
+        <!-- <div class="snowfall-flakes"></div> -->
+        <img src="./images/2.png" alt="" class="anima">
+    </div>
+    <script>
+        $(function () {
+            setTimeout(function () {
+                $(document).snowfall({
+                    flakeCount: 30, //设置爱心数目
+                    flakeColor: 'none'
+                })
+            }, 2000);
+        })
+    </script>
+</body>
+
+</html>
