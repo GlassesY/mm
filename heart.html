@@ -18,6 +18,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction:column;
             width: 400px;
             margin: 100px auto;
             position: relative;
@@ -48,10 +49,10 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            background: url("images/1.png");
+            /* background: url("images/1.png");
             background-position: center 10px;
             background-size: 80%;
-            background-repeat: no-repeat;
+            background-repeat: no-repeat; */
         }
 
         body,
@@ -62,7 +63,7 @@
 
         img {
             width: 80%;
-            margin-top: 80%;
+            
         }
 
         .anima {
@@ -72,6 +73,7 @@
             animation-delay: 0s; 
             animation-iteration-count: infinite; 
             animation-duration: 1s; 
+            margin-top: -20%;
         }
 
         @keyframes likes {
@@ -101,6 +103,7 @@
 <body>
     <div class="heart">
         <!-- <div class="snowfall-flakes"></div> -->
+        <img src="./images/1.png" alt="" style="width:130%;">
         <img src="./images/2.png" alt="" class="anima">
     </div>
     <script>
